@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import logoImg from "../assets/ICDR.png";
+import { useState } from "react";
+
+const navItems = [
+  { label: "Arbitration", href: "#" },
+  { label: "Mediation", href: "#" },
+  { label: "Rules", href: "#" },
+  { label: "Fee Structure", href: "#" },
+  { label: "Contact Us", href: "#" },
+];
+---
+
+<header class="bg-[#2E5E4E] shadow-md">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="flex font-serif font-bold items-center">
+      <Image src={logoImg} alt="Company Logo Image" width={128} height={128} />
+      <span class="ml-2 text-[#F8F8F8]"
+        >Indian Council for Dispute Resolution</span
+      >
+    </a>
+    <button
+      id="menu-button"
+      class="md:hidden text-[#F8F8F8] focus:outline-none"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex space-x-6">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-[#F8F8F8] hover:text-[#4A4A4A] transition duration-150 ease-in-out"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden">
+    <nav class="flex flex-col space-y-4 px-4 py-4">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-[#F8F8F8] hover:text-[#4A4A4A] transition duration-150 ease-in-out"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const menu = document.getElementById("menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
