@@ -1,6 +1,7 @@
-# Magical Motion Astro Theme
+# Indian Council for Dispute Resolution - Website
 
-NOTE - Heavily Inspired by - https://www.wellthapp.com/
+- Developed using Astro, Tailwind CSS and Vercel
+- By Aditya Parikh
 
 ## Getting Started
 
@@ -9,12 +10,12 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 ```bash
 bash
-git clone https://github.com/your-username/magical-motion.git
+git clone {repo link}
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd magical-motion
+cd ICDR
 ```
 
 3. Install the dependencies
@@ -30,12 +31,22 @@ npm run dev
 
 The development server will start at `http://localhost:4321`. Any changes you make to the code will be automatically reflected in the browser.
 
+## Building for Production
+
+To build the project for production, run the following command:
+```bash
+npm run build
+```
+
+
+This command will generate a production-ready build of your website in the `dist/` directory. You can deploy the contents of this directory to a hosting service to make your website live.
+
 ## Project Structure
 
 The project structure is organized as follows:
 
 ```bash
-magical-motion/
+ICDR/
 ├── src/
 │ ├── components/
 │ │ ├── Header.astro
@@ -71,15 +82,6 @@ To edit a component, navigate to the `src/components/` directory and open the co
 
 Astro components use a mix of HTML, CSS, and JavaScript (or TypeScript). You can modify the markup, styles, and logic within these files to customize the appearance and behavior of the components.
 
-## Building for Production
-
-To build the project for production, run the following command:
-```bash
-npm run build
-```
-
-
-This command will generate a production-ready build of your website in the `dist/` directory.
 
 ## Deploying to Production
 
