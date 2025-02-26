@@ -1,14 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import logoImg from "../assets/ICDR.png";
+import logoImg from "../assets/ICDR.svg";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Arbitration", href: "#" },
-  { label: "Mediation", href: "#" },
-  { label: "Rules", href: "#" },
-  { label: "Fee Structure", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Arbitration", href: "/arbitration" },
+  { label: "Mediation", href: "/mediation" },
+  { label: "Rules", href: "/arbitration_rules" },
+  // { label: "Our Panel", href: "/our_panel" },
+  { label: "The Panel", href: "/our_panel",
+    submenu: [
+      { label: "Arbitrators", href: "/arbitrators" },
+      { label: "Mediators", href: "/mediators" },
+      { label: "Industry Experts", href: "/industry_experts" },
+    ],
+  },
+  { label: "Fee Structure", href: "/fees" },
+  { label: "Contact Us", href: "/contact_us" },
 ];
 ---
 
@@ -22,15 +30,13 @@ const navItems = [
     </a>
     <button
       id="menu-button"
-      class="md:hidden text-[#F8F8F8] focus:outline-none"
-    >
+      class="md:hidden text-[#F8F8F8] focus:outline-none">
       <svg
         class="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -43,8 +49,7 @@ const navItems = [
         navItems.map((item) => (
           <a
             href={item.href}
-            class="text-[#F8F8F8] hover:text-[#4A4A4A] transition duration-150 ease-in-out"
-          >
+            class="text-[#F8F8F8] hover:text-[#E07A5F] transition duration-150 ease-in-out">
             {item.label}
           </a>
         ))
@@ -57,8 +62,7 @@ const navItems = [
         navItems.map((item) => (
           <a
             href={item.href}
-            class="text-[#F8F8F8] hover:text-[#4A4A4A] transition duration-150 ease-in-out"
-          >
+            class="text-[#F8F8F8] hover:text-[#E07A5F] transition duration-150 ease-in-out">
             {item.label}
           </a>
         ))
