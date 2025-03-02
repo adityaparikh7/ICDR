@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import heroImg from "../assets/icdrlogo.png";
+import icdrlogo from "../assets/icdrlogo.png";
+import alpacino from "../assets/you'reoutoforder.mp4";
 ---
 
 <section class="bg-white py-20">
@@ -8,8 +9,7 @@ import heroImg from "../assets/icdrlogo.png";
     <div class="flex flex-col lg:flex-row items-center">
       <div class="lg:w-1/2 lg:pr-12">
         <h1
-          class="text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6"
-        >
+          class="text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6">
           Vision Statement
         </h1>
         <p class="text-xl text-gray-700 font-inter mb-8 text-justify">
@@ -41,13 +41,19 @@ import heroImg from "../assets/icdrlogo.png";
       </div>
       <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
         <Image 
-          src={heroImg} 
-          alt="Happy family" 
+          src={icdrlogo} 
+          alt="ICDR Logo" 
           class="rounded-lg shadow-xl"
           width={600}
           height={400}
         />
-        <!-- <button
+        <!-- <video
+          src={alpacino}
+          class="rounded-lg shadow-xl"
+          width={600}
+          height={400}
+        />
+        <button
           id="playButton"
           class="absolute bottom-4 left-4 bg-white bg-opacity-80 text-gray-800 px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-opacity-100 transition duration-300"
         >
@@ -57,7 +63,7 @@ import heroImg from "../assets/icdrlogo.png";
           </svg>
           <span>See how this works</span>
         </button> -->
-      </div>
+      </div> 
     </div>
   </div>
 </section>

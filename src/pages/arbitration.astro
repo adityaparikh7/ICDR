@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import arbitration from "../assets/arbitration.jpg";
 ---
 
 <Layout title="Arbitration">
@@ -17,6 +19,15 @@ import Layout from "../layouts/Layout.astro";
             award". An arbitration award is legally binding on both sides and
             enforceable in the courts.
           </p>
+        </div>
+        <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
+          <Image
+            src={arbitration}
+            alt="Arbitration"
+            class="rounded-lg shadow-xl"
+            width={600}
+            height={400}
+          />
         </div>
       </div>
     </div>
